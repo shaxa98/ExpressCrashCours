@@ -1,11 +1,22 @@
-# ExpressCrashCours
+# Express Crash Course
 
-1. npm package: npm i express
-2. npm i --save-dev nodemon
+> Files for the YouTube crash course
 
-Change in package.json
-"scripts": to =>{
-"start": "node index.js"
-"devStart": "nodemon index.js",
+- Setup & Install / Simple Server
+- Simple API
+- Routes, Request & Response
+- Express Router
+- Static Files
+- Template Engine Setup With Views
+- Middleware
+- Nodemon
 
-}, 3. npm run devStart
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Serve on localhost:5000
+npm run dev
+```
