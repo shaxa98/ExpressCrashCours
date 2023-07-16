@@ -38,9 +38,9 @@ app.get("/api/courses/:id", (req, res) => {
 //   res.send(req.query);
 // });
 
-// app.post(); Object qati mukunad
+///app.post(); Object qati mukunad
 app.post("/api/courses", (req, res) => {
-  if (!req.body || req.body.name.length < 3) {
+  if (!req.body || req.body?.name?.length < 3) {
     // 400 Bad Request
     res
       .status(400)
@@ -56,6 +56,27 @@ app.post("/api/courses", (req, res) => {
 });
 
 // app.put();
+// app.put("/api/courses/:id", (req, res) => {
+//   const course = courses.find((c) => c.id === parseInt(req.params.id));
+//   if (!course)
+//     res.status(404).send("The cours with the given ID was not found");
+
+//   const result = validateCourse(req.body);
+//   const { error } = validateCourse(req.body); // result.error
+
+//   if (error) {
+//     res.status(400).send(error.details[0].message);
+//     return;
+//   }
+//   course.name = req.body.name;
+//   res.send(course);
+// });
+// function validateCourse(course) {
+//   const schema = {
+//     name: Joi.string().min(3).required(),
+//   };
+//   return Joi.ValidationError(course, schema);
+// }
 // app.delete();
 // PORT
 const port = process.env.PORT || 2900;
